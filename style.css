@@ -15,9 +15,10 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden;   */
   background-color: var(--bg);
   font-family: Arial, Helvetica, sans-serif;
+  color: #1c1e21;
 }
 
 .main-wrapper {
@@ -25,6 +26,8 @@ body {
   height: 680px;
   margin: auto;
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .branding {
@@ -74,7 +77,7 @@ input:focus::placeholder {
 }
 
 .login-btn {
-  background-color: var(--blue);
+  background-color: #0866ff;
   color: var(--white);
   font-size: 1.2rem;
   font-weight: bolder;
@@ -86,7 +89,7 @@ input:focus::placeholder {
 
 .login-btn:hover {
   cursor: pointer;
-  background-color: var(--dark-blue);
+  background-color: var(--blue);
 }
 
 a {
@@ -95,6 +98,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .forgot {
@@ -108,4 +112,96 @@ hr {
 }
 
 .register-button {
+  background-color: var(--green);
+  color: var(--white);
+  display: inline-block;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-weight: bolder;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.register-button:hover {
+  text-decoration: none;
+  background-color: var(--dark-green);
+}
+
+.bottom-link {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.page {
+  color: #000;
+  font-weight: bold;
+}
+
+.footer-wrapper {
+  height: 100%;
+  max-height: 200px;
+  background-color: var(--white);
+  padding: 25px 0;
+}
+
+footer {
+  height: 100%;
+  width: 100%;
+  padding: 0 40px;
+}
+
+ul {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+  font-size: 0.75rem;
+  color: #7e7e7e;
+  line-height: 1.5;
+}
+
+li {
+  margin-right: 15px;
+}
+
+footer p {
+  color: #7e7e7e;
+  font-size: 0.75rem;
+  max-width: 1000px;
+  margin: auto;
+}
+footer hr {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+span {
+  font-weight: 700;
+}
+
+@media (min-width: 900px) {
+  .main-wrapper {
+    width: 90%;
+    max-width: 980px;
+    flex-direction: row;
+    padding-top: 70px;
+    justify-content: space-between;
+  }
+
+  .branding {
+    text-align: left;
+    padding-top: 80px;
+    width: 480px;
+  }
+
+  .slogan {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
